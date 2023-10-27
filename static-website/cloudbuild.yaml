@@ -4,4 +4,4 @@ steps:
 - name: gcr.io/cloud-builders/gsutil
   args: ['-m', 'rsync', '-d', '-r', '.', 'gs://mobilex-bucket']  # This step deletes files in the bucket that are not in the source.
 - name: gcr.io/cloud-builders/gcloud
-  args: ['compute', 'url-maps', 'invalidate-cdn-cache', 'YOUR_URL_MAP_NAME']  # Replace YOUR_URL_MAP_NAME with your actual URL map name.
+  args: ['compute', 'url-maps', 'invalidate-cdn-cache', 'mobilex-backenservice']  # Replace YOUR_URL_MAP_NAME with your actual URL map name.
